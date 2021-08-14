@@ -81,7 +81,7 @@ extension HomeViewController: UISearchBarDelegate {
                     self?.dataSource.errorMessage = nil
                     self?.dataSource.items = self?.homeViewMode.items ?? []
                 } else {
-                    self?.dataSource.errorMessage = self?.homeViewMode.searchResult?.error
+                    self?.dataSource.errorMessage = self?.homeViewMode.searchResult?.error ?? error?.localizedDescription
                     self?.dataSource.items = [OMDBSearchItem]()
                     
                 }

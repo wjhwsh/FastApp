@@ -33,12 +33,12 @@ class EmptyTableViewCell: UITableViewCell {
     }
     
     func setupViews() {
-        self.contentView.translatesAutoresizingMaskIntoConstraints = false
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
+        messageLabel.textAlignment = .center
         self.contentView.addSubview(messageLabel)
         NSLayoutConstraint.activate(
             [messageLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 15),
-             messageLabel.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: 15),
+             messageLabel.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -15),
              messageLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 50),
              messageLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 50)
             ]
